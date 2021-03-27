@@ -54,7 +54,6 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>18.4.0.49</Version>
     </PackageReference>
