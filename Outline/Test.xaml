@@ -6,7 +6,9 @@
     <ContentPage.Content>
         <StackLayout>
             <maps:Map x:Name="map"/>
-            <Button Text="XD"/>
+            <Entry x:Name="Entry" Placeholder="enter address"/>
+            <Button Text="XD"
+                    Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
