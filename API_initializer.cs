@@ -1,12 +1,8 @@
 ﻿using System;
 
-
-public static class APIinitializer
+public class Class1
 {
-	public static HttpClient ApiClient { get; set; }
-
-	public static APIinitializer()
+	public Class1()
 	{
-		
 	}
 }
