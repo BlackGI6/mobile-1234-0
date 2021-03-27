@@ -13,7 +13,7 @@ namespace Outline
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SimpleLoginPage());
+            await Navigation.PushAsync(new Test());
         }
     }
 }
