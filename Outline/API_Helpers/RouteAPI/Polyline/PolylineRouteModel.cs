@@ -4,49 +4,49 @@ using System.Text;
 
 namespace Outline.API_Helpers.RouteAPI
 {
-    class section
+    public class section
     {
-        struct arrival
+        public struct arrival
         {
-            struct place
+            public struct place
             {
-                struct location
+                public struct location
                 {
-                    string lat;
-                    string lng;
+                    public string lat;
+                    public string lng;
                 }
-                string type;
+                public string type;
             }
-            string time;
+            public string time;
         }
-        struct departure
+        public struct departure
         {
-            struct place
+            public struct place
             {
-                struct location
+                public struct location
                 {
-                    string lat;
-                    string lng;
+                    public string lat;
+                    public string lng;
                 }
-                string type;
+                public string type;
             }
-            string time;
+            public string time;
         }
-        string id;
-        string polyline;
-        struct transport
+        public string id;
+        public string polyline;
+        public struct transport
         {
-            string mode;
+            public string mode;
         }
-        string type;
+        public string type;
     }
-    class route
+    public class route
     {
-        string id;
-        section[] sections;
+        public string id;
+        public section[] sections;
     }
     public class PolylineRouteModel //Route Object ( for polyline )
     {
-        route[] routes;
+        public route[] routes;
     }
 }

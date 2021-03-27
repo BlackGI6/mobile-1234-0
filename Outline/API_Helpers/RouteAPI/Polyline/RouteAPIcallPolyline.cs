@@ -27,7 +27,7 @@ namespace Outline.API_Helpers
                         Trace.WriteLine("json response from route api (polyline):\n" + responseContent + "\nGot result @" + DateTime.Now);
                     }
                     Trace.WriteLine(responseMessage.StatusCode);
-                    return responseContent;
+                    return responseContent; // returns Json answer from routing API (polyline - !!!ENCODED!!!)
                 }
             }
             catch(Exception er)
