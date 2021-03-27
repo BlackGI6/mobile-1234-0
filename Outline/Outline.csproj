@@ -16,6 +16,8 @@
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.4.0.49" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.4.0.49" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.4.0.49" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2012" />
@@ -40,5 +42,11 @@
     <EmbeddedResource Update="Views\Forms\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="HERE.FlexiblePolyline">
+      <HintPath>V:\C#\Outline27.03.2021\Outline_API_call_classes\decodePolyline\src\bin\Debug\netstandard2.0\HERE.FlexiblePolyline.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
