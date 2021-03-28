@@ -2,6 +2,9 @@
 using Firebase.Database.Query;
 using Outline.Models;
 using System.Threading.Tasks;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Outline.Helper
 {
@@ -15,5 +18,15 @@ namespace Outline.Helper
                 Address=address
             }) ;
         }
+        public async Task AddPoint(string UID, string lat,string llong)
+        {
+            await firebaseClient.Child(UID).PostAsync(new PointOfInterest()
+            {
+                uniqueId=UID,
+                Latitude=lat,
+                Longitude=llong,
+            });
+        }
+        // TODO RETRIEVE POINTS FROM DATABASE 
     }
 }
