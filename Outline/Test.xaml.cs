@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using System.Diagnostics;
+using Outline.Helper;
 
 namespace Outline
 {
@@ -19,7 +20,7 @@ namespace Outline
         {
             InitializeComponent();
         }
-
+        readonly FirebasePointHelper firebaseClient = new FirebasePointHelper();
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
@@ -40,10 +41,11 @@ namespace Outline
 
                 //get current position
                 var currentLocation = await Geolocation.GetLastKnownLocationAsync();
-                string currentlocation_lat = currentLocation.Latitude.ToString();
-                string currentlocation_lng = currentLocation.Longitude.ToString();
+                string currentlocation_lat = "45.751650";
+                string currentlocation_lng = "21.226114";
                 string pinlocation_lat = position.Latitude.ToString();
                 string pinlocation_lng = position.Longitude.ToString();
+                await firebaseClient.AddPoint(DateTime.Now.ToString("dd mm yyyy hh:mm:ss"), pinlocation_lat, pinlocation_lng);
                 if (currentLocation != null)
                 {
                     Polyline_Visual.DrawPolyline drawPolyline = new Polyline_Visual.DrawPolyline(currentlocation_lat, currentlocation_lng, pinlocation_lat, pinlocation_lng);
