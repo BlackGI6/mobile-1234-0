@@ -1,4 +1,4 @@
-﻿using Firebase.Auth;
+﻿using Firebase.Auth; 
 using Outline.Droid;
 using System.Threading.Tasks;
 using Xamarin.Forms;
