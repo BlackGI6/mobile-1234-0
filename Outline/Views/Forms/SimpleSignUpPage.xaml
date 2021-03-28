@@ -81,7 +81,7 @@
                             Placeholder="Address"
                             PlaceholderColor="{DynamicResource Gray-700}"
                             Style="{StaticResource EntryStyle}"
-                            Text="{Binding Name}"
+                          
                             TextColor="{DynamicResource Gray-900}" />
                     </border:SfBorder>
                     <!-- Email entry -->
@@ -94,7 +94,7 @@
                             Placeholder="Email"
                             PlaceholderColor="{DynamicResource Gray-700}"
                             Style="{StaticResource EntryStyle}"
-                            Text="{Binding Name}"
+                       
                             TextColor="{DynamicResource Gray-900}" />
                     </border:SfBorder>
                    
@@ -134,7 +134,8 @@
                         CornerRadius="20"
                         FontFamily="{StaticResource Montserrat-SemiBold}"
                         Style="{StaticResource SfButtonStyle}"
-                        Text="REGISTER" />
+                        Text="REGISTER"
+                        Clicked="SfButton_Clicked_1"/>
                 </StackLayout>
 
                 <StackLayout
