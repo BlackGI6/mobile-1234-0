@@ -8,7 +8,8 @@ using Xamarin.Forms.Xaml;
 namespace Outline
 {
     public partial class App : Application
-    {
+    {   
+        public static string UserUID { get; set; }
         public static Outline_Configuration conf;
         public App()
         {

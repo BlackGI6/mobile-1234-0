@@ -24,6 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="HERE.FlexiblePolyline">
+      <HintPath>D:\Download Folder\HERE.FlexiblePolyline.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Test.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -42,11 +48,5 @@
     <EmbeddedResource Update="Views\Forms\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="HERE.FlexiblePolyline">
-      <HintPath>V:\C#\Outline27.03.2021\Outline_API_call_classes\decodePolyline\src\bin\Debug\netstandard2.0\HERE.FlexiblePolyline.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>

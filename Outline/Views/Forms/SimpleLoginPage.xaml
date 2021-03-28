@@ -57,7 +57,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
+
                     </Grid.RowDefinitions>
 
                     <!--  Label to display the title of this page  -->
@@ -80,7 +80,19 @@
                         TextColor="{DynamicResource Gray-800}" />
 
                     <!--  Entry to get email ID from user  -->
-                    <local:SimpleEmailEntry Grid.Row="2" Padding="0,24" />
+                    <border:SfBorder
+                        Grid.Row="2"
+                        BackgroundColor="{DynamicResource Gray-White}"
+                        BorderColor="{Binding Source={x:Reference PasswordEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}"
+                        Style="{StaticResource SfBorderStyle}">
+                        <control:BorderlessEntry
+                            x:Name="EmailEntry"
+                            Placeholder="Email"
+                            PlaceholderColor="{DynamicResource Gray-700}"
+                            Style="{StaticResource EntryStyle}"
+                            Text="{Binding Email}"
+                            TextColor="{DynamicResource Gray-900}" />
+                    </border:SfBorder>
 
                     <!--  Entry to get password from user  -->
                     <border:SfBorder
@@ -119,44 +131,9 @@
                         Margin="0,16"
                         Command="{Binding LoginCommand}"
                         Style="{StaticResource SfButtonStyle}"
-                        Text="LOG IN" />
+                        Text="LOG IN"
+                        Clicked="SfButton_Clicked"/>
 
-
-                    <Label
-                        Grid.Row="6"
-                        FontFamily="{StaticResource Montserrat-Medium}"
-                        HorizontalTextAlignment="Center"
-                        Style="{StaticResource LabelStyle}"
-                        Text="Or create an account using social media"
-                        TextColor="{DynamicResource Gray-800}" />
-
-                    <!--  Login through facebook account  -->
-                    <buttons:SfButton
-                        Grid.Row="7"
-                        Margin="0,16,0,16"
-                        BackgroundColor="{DynamicResource FacebookBlue}"
-                        Command="{Binding SocialMediaLoginCommand}"
-                        CornerRadius="20"
-                        HeightRequest="40">
-                        <buttons:SfButton.Content>
-                            <StackLayout
-                                HorizontalOptions="CenterAndExpand"
-                                Orientation="Horizontal"
-                                VerticalOptions="Center">
-                                <Label
-                                    FontFamily="{StaticResource FontIcons}"
-                                    FontSize="18"
-                                    Text="&#xe735;"
-                                    TextColor="{DynamicResource Gray-White}"
-                                    VerticalTextAlignment="Center" />
-                                <Label
-                                    FontFamily="{StaticResource Montserrat-Medium}"
-                                    FontSize="16"
-                                    Text="Login with Facebook"
-                                    TextColor="{DynamicResource Gray-White}" />
-                            </StackLayout>
-                        </buttons:SfButton.Content>
-                    </buttons:SfButton>
 
                 </Grid>
 
@@ -166,12 +143,6 @@
                     Spacing="1"
                     VerticalOptions="End">
 
-                    <StackLayout.Padding>
-                        <OnIdiom
-                            x:DataType="Thickness"
-                            Default="0, 48, 0, 0"
-                            Phone="0" />
-                    </StackLayout.Padding>
 
                     <Label
                         FontFamily="{StaticResource Montserrat-Medium}"
@@ -187,7 +158,8 @@
                         Command="{Binding SignUpCommand}"
                         CornerRadius="4"
                         Style="{StaticResource SfFlatButtonStyle}"
-                        Text="Sign Up" />
+                        Text="Sign Up"
+                        Clicked="SfButton_Clicked_1"/>
 
                 </StackLayout>
 
